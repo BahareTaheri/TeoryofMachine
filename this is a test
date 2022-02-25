@@ -1,0 +1,64 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "EX02.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyP112yeenlsWxKP26bkAO17",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/bhrthri/TeoryofMachine/blob/main/this%20is%20a%20test\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#bahare_th#BMI\n",
+        "\n",
+        "weight = float(input(\"enter your weight(kg): \"))\n",
+        "height = float(input(\"enter your height:(cm) \"))\n",
+        "\n",
+        "m = height / 100\n",
+        "\n",
+        "#formula BMI is Weight / height * height in meter\n",
+        "BMI = weight / (m * m)\n",
+        "if BMI < 18.5:\n",
+        "  print(\"Underweight\")\n",
+        "elif BMI >= 18.5 and BMI <= 24.9:\n",
+        "  print(\"Normal\")\n",
+        "elif BMI >= 25 and BMI <= 29.9:\n",
+        "  print(\"overweight\")\n",
+        "elif BMI >= 30 and BMI <=24.9:\n",
+        "  print(\"Obese\")\n",
+        "elif 35 < BMI:\n",
+        "  print(\"Extremely Obese\")\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "CVbLIsghq5fU"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
