@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1Uv7YpKt-KxlT5Vr3RSoPK7OMRB9ROEIi
 """
 
-#bahare_th#Ex04#triangel
+#bahare_th#Ex04#Triangle
 
 x = float(input("Enter x:"))
 y = float(input("Enter y:"))
