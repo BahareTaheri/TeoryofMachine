@@ -1,0 +1,7 @@
+import random
+
+n = int(input("Enter your nmuber: "))
+array = []
+for i in range(0 , n):
+  rand = random.randint(1,100)
+  print(rand, end = " ")
