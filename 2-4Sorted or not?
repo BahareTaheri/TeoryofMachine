@@ -1,0 +1,15 @@
+lst = []
+#get size of list
+size = int(input("Enter size of list:"))
+
+#get number and append in a list
+for i in range(0,size):
+  user_input = int(input("Enter number: "))
+  lst.append(user_input)
+print("here your list",lst)
+
+#check array is sorted or not
+if lst == sorted(lst):
+  print("Yes,list is Sorted")
+else:
+  print("No,list is Not sorted")
