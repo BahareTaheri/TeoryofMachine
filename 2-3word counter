@@ -1,0 +1,15 @@
+#bahareTaheri#E02#word covnter
+
+
+#split a sentence into list of words
+def convert(lst):
+    return ' '.join(lst).split()
+     
+
+# Driver code
+lst =[]
+user_input= input("Enter your sentence: ")
+lst.append(user_input)
+x = convert(lst)
+count = len(x)
+print("count:", count)
