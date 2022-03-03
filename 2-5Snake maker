@@ -1,0 +1,8 @@
+#bahare#E02#make Snake
+#get number 
+input_user = int(input("Enter a number:"))
+
+
+for i in range(0,input_user):
+  print("⬜",end="")
+  
