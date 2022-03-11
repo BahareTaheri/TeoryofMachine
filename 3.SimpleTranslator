@@ -1,0 +1,94 @@
+#Bahare#E03#SimpleTranslator
+
+from google.colab import drive #this is for using file in GoogleDrive
+import sys
+address = "/Translate_DataBase.txt"
+
+#Erorr handling is at the beginning of file
+#get number of line in file
+try:
+  f_open = open(address, "r")
+  lineNumber = len(f_open.readlines()) #by using this method
+  f_open.close()
+
+except FileNotFoundError:
+       print("File not found")
+       #exit()
+       sys.exit(1)  
+       #googleColab dosen't support exit() or quit() 
+
+
+print("Hello user , Welcome to my Dictionery")
+print("loading Database ...")
+print("""Select:
+         1. add new word
+         2. translation english2persian
+         3. translation persian2english
+         4. exit
+     """)
+
+#Select from menue:
+user_option = input("Enter a number to start: ")
+
+# 1.add new word
+if user_option == "1":
+  user_NewWord = input("Enter your English word:")
+  user_Translate = input("What does mean in farsi? ")
+  f2 = open(address, "a+") #a+ is a parameter for append to existing file
+  f2.write('\n'+ user_NewWord)
+  f2.write('\n'+user_Translate)
+  f2.close()
+  print("succesful")
+
+
+
+
+# 2.translation english2persian
+if user_option == "2":
+
+#openFile
+    
+     f = open(address, "r")
+     WORDS = [] 
+     for i in range(lineNumber):
+        english_word = f.readline().strip()
+        persian_word = f.readline().strip()
+        my_dict = {"en": english_word , "fa":persian_word}
+        WORDS.append(my_dict)
+
+    
+
+#Translate     
+     user_text = input("Please enter your text:")
+     print("translate is: ", end = "")
+     user_words = user_text.split(" ") #input:i love you => ['i', 'love','you']
+
+     for user_word in user_words:
+          for word in WORDS:
+            if word["en"] == user_word:
+              print(word["fa"], end=" ")
+              break
+          else:
+            print(user_word, end = " ")
+
+#3. translation persian2english
+if user_option == "3":
+  user_text = input("Please enter your text:")
+  print("translate is: ", end = "")
+  user_words = user_text.split(" ")
+
+  for user_word in user_words:
+      for word in WORDS:
+        if word["fa"] == user_word:
+          print(word["en"], end=" ")
+          break
+      else:
+        print(user_word, end = " ")
+
+#4. exit
+if user_option == "4":
+  print("goodbye")
+  sys.exit(1)
+  #exit()
+  #googleColab dosen't support exit() or quit() 
+ 
